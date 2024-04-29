@@ -21,12 +21,5 @@ class AnggotaSeeder extends Seeder
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
-        // DB::table("peminjaman")->insert([
-        //     'tanggal_pinjam' => '2024-04-10',
-        //     'jumlah_pinjam' => '1000000',
-        //     'status' => 'pending',
-        //     'created_at' => Carbon::now(),
-        //     'updated_at' => Carbon::now(),
-        // ]);
     }
 }

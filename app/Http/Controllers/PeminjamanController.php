@@ -78,6 +78,8 @@ class PeminjamanController extends Controller
     
             // Memperbarui status peminjaman berdasarkan data dari body permintaan
             $peminjaman->update($request->only('status'));
+
+            $peminjaman->makeHidden(['created_at', 'updated_at']);
     
             // Mengembalikan respons JSON jika pembaruan berhasil
             return response()->json([

@@ -17,14 +17,8 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('/anggota', 'AnggotaController@index');
-$router->get('/anggota/{id}', 'AnggotaController@show');
-$router->post('/anggota', 'AnggotaController@store');
-$router->put('/anggota/{id}', 'AnggotaController@update');
-$router->delete('/anggota/{id}', 'AnggotaController@delete');
-
 $router->get('/api/peminjaman', 'PeminjamanController@index');
+$router->get('/api/peminjaman/{id}', 'PeminjamanController@show');
 $router->post('/api/peminjaman', 'PeminjamanController@store');
 $router->put('/api/peminjaman/{id}', 'PeminjamanController@update');
-$router->get('/api/peminjaman/{id}', 'PeminjamanController@show');
 $router->delete('/api/peminjaman/{id}', 'PeminjamanController@delete');
