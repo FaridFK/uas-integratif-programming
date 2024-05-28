@@ -17,8 +17,9 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('/api/peminjaman', 'PeminjamanController@index');
-$router->get('/api/peminjaman/{id}', 'PeminjamanController@show');
-$router->post('/api/peminjaman', 'PeminjamanController@store');
-$router->put('/api/peminjaman/{id}', 'PeminjamanController@update');
-$router->delete('/api/peminjaman/{id}', 'PeminjamanController@delete');
+$router->post('/api/iuran', 'IuranController@store');
+$router->get('/api/iuran', 'IuranController@index');
+$router->get('/api/iuran/{id}', 'IuranController@show');
+$router->put('/api/iuran/{id}', 'IuranController@update');
+$router->delete('/api/iuran/{id}', 'IuranController@destroy');
+$router->get('/api/iuran/tunggakan/{tahun}', 'IuranController@tunggakan');
